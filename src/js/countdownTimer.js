@@ -1,15 +1,18 @@
 'use strict';
 
-import { refs } from './ref';
-
-class CountdownTimer {
+export class CountdownTimer {
   constructor(targetDate) {
-    this.targetDate = targetDate;
     this.differenceTime = null;
+    this.targetDate = this.convertDateToNumber(targetDate);
     this.days = document.querySelector('span[data-value="days"]');
     this.hours = document.querySelector('span[data-value="hours"]');
     this.mins = document.querySelector('span[data-value="mins"]');
     this.secs = document.querySelector('span[data-value="secs"]');
+  }
+
+  convertDateToNumber(date) {
+    const dateObj = new Date(date);
+    return Date.parse(dateObj);
   }
 
   countTimeDay(ms) {
@@ -34,19 +37,3 @@ class CountdownTimer {
     return String(value).padStart(2, 0);
   };
 }
-
-const targetDate = new Date('Dec 03,2020');
-const timer = new CountdownTimer(Date.parse(targetDate));
-
-timer.startTimer();
-
-// refs.startBtn.addEventListener('click', handleStartBtn);
-// refs.stopBtn.addEventListener('click', handleStopBtn);
-
-// function handleStartBtn() {
-//   timer.startTimer();
-// }
-
-// function handleStopBtn() {
-//   timer.stopTimer();
-// }
