@@ -38,13 +38,15 @@ class CountdownTimer {
 const targetDate = new Date('Dec 03,2020');
 const timer = new CountdownTimer(Date.parse(targetDate));
 
-refs.startBtn.addEventListener('click', handleStartBtn);
-refs.stopBtn.addEventListener('click', handleStopBtn);
+timer.startTimer();
 
-function handleStartBtn() {
-  timer.startTimer();
-}
+// refs.startBtn.addEventListener('click', handleStartBtn);
+// refs.stopBtn.addEventListener('click', handleStopBtn);
 
-function handleStopBtn() {
-  timer.stopTimer();
-}
+// function handleStartBtn() {
+//   timer.startTimer();
+// }
+
+// function handleStopBtn() {
+//   timer.stopTimer();
+// }

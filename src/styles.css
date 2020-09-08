@@ -15,45 +15,32 @@ body {
   background-image: url('./images/bg-pattern.png');
 }
 
-.container {
-  padding: 300px 0 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.field {
+  position: relative;
+  font-family: 'Anton';
+  font-size: 45px;
+  padding: 35px;
 }
 
-.controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
+.label {
+  right: 10px;
+  top: 30px;
+  position: absolute;
+  font-size: 25px;
+  transform: rotate(45deg);
+  color: rgb(172, 172, 172);
+}
+
+.value {
+  display: block;
+  text-align: center;
+  width: 100px;
+  border: 1px black solid;
 }
 
 .timer {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-button {
-  margin: 20px;
-}
-
-.field {
-  display: block;
-  font-family: 'Anton';
-  font-size: 30px;
-  padding: 5px;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(150, 218, 255, 0.5) 49%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  /* border: 1px solid paleturquoise; */
-}
-
-.label {
-  font-size: 20px;
+  padding-top: 200px;
+  min-width: 200px;
 }
