@@ -3,16 +3,11 @@
 export class CountdownTimer {
   constructor(targetDate) {
     this.differenceTime = null;
-    this.targetDate = this.convertDateToNumber(targetDate);
+    this.targetDate = new Date(targetDate);
     this.days = document.querySelector('span[data-value="days"]');
     this.hours = document.querySelector('span[data-value="hours"]');
     this.mins = document.querySelector('span[data-value="mins"]');
     this.secs = document.querySelector('span[data-value="secs"]');
-  }
-
-  convertDateToNumber(date) {
-    const dateObj = new Date(date);
-    return Date.parse(dateObj);
   }
 
   countTimeDay(ms) {
