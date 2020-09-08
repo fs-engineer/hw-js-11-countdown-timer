@@ -1,13 +1,16 @@
 'use strict';
 
 export class CountdownTimer {
-  constructor(targetDate) {
+  constructor({ selector, targetDate }) {
     this.differenceTime = null;
-    this.targetDate = new Date(targetDate);
-    this.days = document.querySelector('span[data-value="days"]');
-    this.hours = document.querySelector('span[data-value="hours"]');
-    this.mins = document.querySelector('span[data-value="mins"]');
-    this.secs = document.querySelector('span[data-value="secs"]');
+    this.targetDate = targetDate;
+
+    this.days = document.querySelector(`${selector} .value[data-value="days"]`);
+    this.hours = document.querySelector(
+      `${selector} .value[data-value="hours"]`,
+    );
+    this.mins = document.querySelector(`${selector} .value[data-value="mins"]`);
+    this.secs = document.querySelector(`${selector} .value[data-value="secs"]`);
   }
 
   countTimeDay(ms) {
