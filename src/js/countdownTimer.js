@@ -4,7 +4,6 @@ export class CountdownTimer {
   constructor({ selector, targetDate }) {
     this.differenceTime = null;
     this.targetDate = targetDate;
-    console.log(targetDate);
 
     this.days = document.querySelector(`${selector} .value[data-value="days"]`);
     this.hours = document.querySelector(
